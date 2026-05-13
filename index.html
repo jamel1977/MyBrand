@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--bootstrap-icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  <link rel="stylesheet" href="style.css">
+  <title>My Brand website</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+        <!--navbar-->
+        <!--
+        navbar           : crée une barre de navigation
+        navbar-expand-sm : menu horizontal à partir des petits écrans(burger)
+        navbar-dark      : texte/icônes clairs
+        bg-dark          : fond sombre
+        fixed-top        : navbar fixée en haut
+        -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">MyBrand</a> 
+                 <!--
+                navbar-toggler        : bouton menu responsive
+                type="button"         : bouton normal
+                data-bs-toggle        : active collapse Bootstrap
+                data-bs-target        : élément à afficher/masquer
+                aria-controls         : élément contrôlé
+                aria-expanded="false" : menu fermé au départ
+                -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                 aria-controls="navbarNav" aria-expanded="false" >
+                 <span class="navbar-toggler-icon"></span>
+                </button>   
+                <div class="collapse navbar-collapse " id ="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a> </li>
+                        
+                        </li>
+                    </ul>
+                </div>  
+                            
+            </div>
+
+        </nav>
+        <!--header-->
+        <header class="bg-primary d-flex align-items-center text-white pt-3 mt-5">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h1 class="header-title">Découvrez <br>Ce que nous pouvons <br> Accomplir ensemble</h1>
+                        <p>Rejoignez-nous dans un parcours d’innovation et de réussite. Nous nous engageons à fournir des solutions qui élèvent votre entreprise 
+                            et transforment votre vision en réalité.</p>
+                        <div class="d-flex gap-3 mb-3">
+                            <button class="btn btn-warning">Découvrir plus</button>
+                            <button class="btn btn-success">Commençons</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7 d-flex justify-content-center">
+                        <img src="images/header.png" class="img-fluid " alt="Header Img">
+                    </div>
+                </div>
+            </div> 
+        </header>
+        <!--client-->
+        <!--bg-light→fond gris très clair, p(padding)y(haut+bas)-5(grande valeur d'espace)-->
+        <section id="clients" class=" py-4"> 
+            <div class="container position-relative">
+                <div class="d-flex flex-wrap  justify-content-center gap-3 flex-wrap px-5">
+                    <img class="client-img img-fluid" src="images/client1.png">
+                    <img class="client-img img-fluid" src="images/client2.png">
+                    <img class="client-img img-fluid" src="images/client3.png">
+                    <img class="client-img img-fluid" src="images/client4.png">
+                    <img class="client-img img-fluid" src="images/client5.png">
+                    <img class="client-img img-fluid" src="images/client6.png">
+                    
+                </div>
+            </div>
+            
+        <section class="py-5 px-md-5" id="services">
+        <div class="container">
+            <h2 class="title-serv text-center">Solutions que nous offrons</h2>
+            
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <!--slide 1-->
+                    <div class="carousel-item active">
+                        <!--card 1-->
+                        <div class="row text-center g-3">
+                    
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card text-center bg-warning bg-gradient h-100">
+                                    <div class="card-body">                
+                                        <i class="bi bi-laptop display-5"></i>
+                                        <h5 class="card-title">Développement Web</h5>
+                                        <p class="card-text">Concevoir des sites web élégants et performants</p>
+                                        <!-- description complète cachée -->
+                                        <div class="card-full" style="display:none;">
+                                            Nous développons des sites web sur mesure, responsives et optimisés pour la performance. 
+                                            Nos technologies incluent HTML, CSS, JavaScript, frameworks modernes et meilleures pratiques SEO.
+                                            Nous assurons tests, déploiement et maintenance continue.
+                                        </div>
+                                        <a class="btn btn-primary">En savoir plus »</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--card 2-->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card text-center bg-warning bg-gradient h-100">
+                                    <div class="card-body">
+                                        <i class="bi bi-phone display-5"></i>
+                                        <h5 class="card-title">Applications Mobile</h5>
+                                        <p class="card-text">Créer des applications qui donnent vie aux idées</p>
+                                         <!-- description complète cachée -->
+                                        <div class="card-full" style="display:none;">
+                                            Nous développons des applications mobiles sur mesure (iOS & Android).
+                                            Livrables : prototypes, code propre, builds App Store/Play Store et tests.
+                                            Fonctionnalités : authentification sécurisée, notifications, offline, intégrations API.
+                                            Contactez‑nous pour transformer votre idée en application performante.
+                                        </div>
+                                        <a class="btn btn-primary">En savoir plus »</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--card 3-->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card text-center bg-warning bg-gradient h-100">
+                                    <div class="card-body">
+                                        <i class="bi bi-gear display-5"></i>
+                                        <h5 class="card-title">Support Tech</h5>
+                                        <p class="card-text">Maintenir vos systèmes en fonctionnement optimal</p>
+                                        <a class="btn btn-primary">En savoir plus »</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--card 4-->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card text-center bg-warning bg-gradient h-100">
+                                    <div class="card-body">
+                                        <i class="bi bi-graph-up display-5"></i>
+                                        <h5 class="card-title">Services de SEO</h5>
+                                        <p class="card-text">Optimiser les sites web pour qu’ils soient bien classés</p>
+                                        <a class="btn btn-primary">En savoir plus »</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> </div> 
+                        <!--slide 2-->
+                        <div class="carousel-item">
+                        <div class="row text-center g-3 justify-content-center">
+                            <!--5 ème card-->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card text-center bg-warning bg-gradient h-100">
+                                    <div class="card-body">
+                                        <i class="bi bi-shield-lock display-5"></i>
+                                        <h5 class="card-title">Sécurité & Cloud</h5>
+                                        <p class="card-text">Protéger vos données et héberger en toute sécurité</p>
+                                        <a class="btn btn-primary">En savoir plus »</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--6 ème card-->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card text-center bg-warning bg-gradient h-100">
+                                    <div class="card-body">
+                                        <i class="bi bi-palette display-5"></i>
+                                        <h5 class="card-title">Design UI/UX</h5>
+                                        <p class="card-text">Des interfaces modernes centrées aux utilisateurs</p>
+                                        <a  class="btn btn-primary">En savoir plus »</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--7 ème card-->
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card text-center bg-warning bg-gradient h-100">
+                                    <div class="card-body">
+                                        <i class="bi bi-megaphone display-5"></i>
+                                        <h5 class="card-title">Marketing Digital</h5>
+                                        <p class="card-text">Développer votre visibilité en ligne et attirer des clients</p>
+                                        <a class="btn btn-primary">En savoir plus »</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> </div> </div> 
+                <button class="carousel-control-prev d-none d-lg-flex" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" ></span>
+                    
+                </button>
+                <button class="carousel-control-next d-none d-lg-flex" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    
+                </button>
+                
+            </div> </div> 
+    </section>
+
+        <!--about-->
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row align-item-center">
+                    <div class="col-md-6">
+                        <img src="images/office.jpg" class="img-fluid w-100 h-100">
+                    </div>
+                    <div class="col-md-6 p-4">
+                        <h2 class="title">Découvrez notre parcours<br>Innover aujourd’hui pour un avenir meilleur demain</h2>
+                        <p>Au cœur de notre activité, nous sommes des innovateurs, des créateurs et des résolveurs de problèmes. 
+                            Animés par la passion de l'excellence, nous conjuguons créativité et technologie pour offrir des solutions 
+                            qui repoussent les limites du possible.</p>
+                        <p>Chaque projet que nous entreprenons contribue à bâtir un avenir meilleur
+                        pour nos clients et leurs communautés</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--portfolio-->
+        <!--faq-->
+        <section id="faq" class="py-5">
+            <div class="container">
+                <h2 class="title text-center">Foire Aux Questions</h2>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Comment nos services bénéficient-ils à votre entreprise ?
+                        </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+      Nos services vous aident à accroître votre visibilité en ligne, à améliorer la performance de vos systèmes et à transformer vos idées en solutions numériques concrètes. 
+      Grâce à notre expertise en développement web, en applications mobiles, en support technique et en référencement SEO, nous vous permettons de gagner en efficacité, 
+      d’attirer davantage de clients et de renforcer la compétitivité de votre entreprise.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Pourquoi investir dans le développement web professionnel ?
+                        </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Un site web professionnel renforce la crédibilité de votre entreprise, améliore l’expérience utilisateur et vous permet d’atteindre un public plus large. Il constitue une vitrine moderne qui valorise vos services et facilite la conversion des visiteurs en clients.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                           Quels avantages apporte le référencement SEO ?
+                        </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Le SEO augmente la visibilité de votre site dans les moteurs de recherche, attire un trafic qualifié et améliore votre positionnement face à la concurrence. C’est une stratégie durable qui génère des résultats sur le long terme sans dépendre uniquement de la publicité payante.</div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+        </section>
+        <!--footer-->
+    
+
+<!-- Bootstrap JS -->
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<!-- </html> -->
